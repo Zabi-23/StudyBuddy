@@ -1,0 +1,179 @@
+
+
+
+/* App.css */
+
+body {
+  font-family: 'Arial', sans-serif; 
+ /* Ange sökvägen till din bild */
+  background-size: cover; /* Gör att bilden täcker hela bakgrunden */
+  background-position: center; /* Centrera bilden */
+  background-repeat: no-repeat; /* Förhindra upprepning av bilden */
+  color: #333; 
+  margin: 0; 
+  padding: 0; 
+  
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('./assets/books/academic_background.jpg'); /* Ange sökvägen till din bild */
+  background-size: cover; /* Gör att bilden täcker hela bakgrunden */
+  background-position: center; /* Centrera bilden */
+  background-repeat: no-repeat; /* Förhindra upprepning av bilden */
+  filter: contrast(0.3); /* Justera kontrasten till 70% */
+  z-index: -1; /* Sätt z-index för att placera det bakom innehållet */
+}
+
+#root {
+  max-width: 550px; 
+  margin: 0 auto; 
+  padding: 2rem; 
+  text-align: center; 
+}
+
+h1 {
+  color: #3b5998; 
+  margin-bottom: 2rem; 
+}
+
+h2 {
+  color: #333; 
+  margin: 1rem 0; 
+}
+
+form {
+  background: transparent; 
+  padding: 2rem; 
+  border-radius: 10px; 
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 2rem; 
+}
+
+input[type="text"] {
+  width: 100%; 
+  padding: 10px; 
+  margin-bottom: 1rem; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  transition: border 0.3s; 
+}
+
+
+
+button {
+  display: inline-block; 
+  background-color: #3b5998; 
+  color: white; 
+  padding: 10px 15px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  font-size: 14px; 
+  transition: background-color 0.3s, transform 0.3s; 
+}
+
+button:hover {
+  background-color: #2d4373; 
+  transform: scale(1.05); 
+}
+
+/* Modal-stilar */
+.ReactModal__Overlay {
+  background-color: rgba(0, 0, 0, 0.7); 
+}
+
+.ReactModal__Content {
+  background: rgb(120, 4, 4); 
+  border-radius: 10px; 
+  padding: 2rem; 
+  max-width: 300px; 
+  margin: 0 auto; 
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); 
+}
+
+/* Lista utan punkter */
+ul {
+  list-style: none; 
+  padding: 0; 
+}
+
+li {
+  margin: 1rem 0; 
+}
+
+/* Bokbehållare */
+.book-container {
+  position: absolute; 
+  left: 120px; 
+  top: 45%; 
+  transform: translateY(-50%) rotate(45deg); 
+  overflow: hidden; 
+  margin-top: 20px; 
+  text-align: center; 
+  z-index: 1; /* Lägg till ett lägre z-index för att göra plats för texten */
+}
+
+.book-image {
+  width: 100%; /* Responsiv bredd, fyller tillgängligt utrymme */
+  max-width: 200px; /* Begränsa maxbredd */
+  height: auto; /* Bevara proportionerna */
+  object-fit: cover; 
+  border-radius: 10px; 
+}
+
+/* Textöverlägg på bokbilden */
+.text-overlay {
+  position: absolute; 
+  bottom: 10px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  background-color: rgba(0, 0, 0, 0.5); 
+  color: rgb(196, 178, 178); 
+  padding: 10px; 
+  border-radius: 5px; 
+  text-align: center; 
+  z-index: 2; /* Högre z-index för att lägga texten ovanpå bilden */
+}
+
+
+ input[type="text"] {
+  width: 100%; 
+  max-width: 400px; 
+  padding: 10px; 
+  margin-bottom: 0.5rem; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  transition: border 0.3s; 
+}
+
+.answer-box {
+  max-width: 400px; 
+  margin: 20px auto; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  background-color: #f4f4f9; 
+}
+
+.answer-box {
+  max-width: 500px; 
+  margin: 20px auto; 
+  padding: 10px; 
+  border: 1px solid #ddd; 
+  border-radius: 5px; 
+  background-color:white; 
+  position: fixed; 
+  bottom: 70px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  max-height: 300px; 
+  overflow-y: auto; 
+  overflow-x: hidden; 
+}
+ 
